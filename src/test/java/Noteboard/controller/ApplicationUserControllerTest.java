@@ -19,7 +19,7 @@ class ApplicationUserControllerTest {
     @BeforeEach
     void setUp() {
         // Register and login a regular user
-        username = "user_test_" + System.currentTimeMillis();
+        username = "user_test_" + System.currentTimeMillis();   
         String password = "test_password";
 
 

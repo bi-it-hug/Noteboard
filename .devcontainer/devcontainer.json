@@ -1,0 +1,28 @@
+{
+  "name": "Quarkus Dev",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "quarkus",
+  "workspaceFolder": "/noteboard",
+
+  "runServices": ["db", "quarkus"],
+  "shutdownAction": "stopCompose",
+
+  "forwardPorts": [8080],
+
+  "postCreateCommand": "mvn -q -DskipTests clean install",
+
+  "remoteUser": "root",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.java",
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-maven",
+        "redhat.vscode-quarkus",
+        "vscjava.vscode-java-debug",
+        "vscjava.vscode-java-test"
+      ]
+    }
+  }
+}
